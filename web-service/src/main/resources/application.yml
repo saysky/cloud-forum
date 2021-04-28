@@ -1,0 +1,40 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: web-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  main:
+    allow-bean-definition-overriding: true
+
+  transaction:
+    rollback-on-commit-failure: true
+  thymeleaf:
+    mode: HTML5
+    cache: false
+    prefix: classpath:/templates/
+    encoding: UTF-8
+    suffix: .html
+    check-template-location: false
+  servlet:
+    multipart:
+      max-file-size: 2000MB
+      max-request-size: 2000MB
+  mail:
+    host: smtp.qq.com
+    username: 847064370@qq.com
+    password: xepylxfmpbhbbbeb
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+    default-encoding: UTF-8

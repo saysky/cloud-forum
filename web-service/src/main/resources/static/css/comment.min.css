@@ -1,0 +1,1795 @@
+.emoji-box {
+    font-size: 12px;
+    font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
+    color: #222;
+    overflow: visible;
+    background: #fff;
+    border: 1px solid #ccd0d7;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .14);
+    margin-top: 7px;
+    margin-bottom: 10px;
+    left: 90px;
+    border-radius: 4px;
+    width: 386px;
+    position: relative;
+    z-index: 103
+}
+
+.emoji-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 30px;
+    width: 8px;
+    height: 5px;
+    background: url(../img/arrow.png) 0 -49px no-repeat
+}
+
+.emoji-box .emoji-title {
+    margin: 8px 18px 0;
+    color: #99a2aa
+}
+
+.emoji-box .emoji-wrap {
+    margin: 4px 8px 8px;
+    height: 152px;
+    overflow: auto
+}
+
+.emoji-box .emoji-wrap img {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer
+}
+
+.emoji-box .emoji-text {
+    color: #111;
+    border-radius: 4px;
+    transition: background .2s;
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 2px 3px;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.emoji-box .emoji-text:hover {
+    background-color: #ddd
+}
+
+.emoji-box .emoji-tabs {
+    position: relative;
+    height: 38px;
+    overflow: hidden;
+    background-color: #f4f5f7;
+    border-radius: 0 0 4px 4px
+}
+
+.emoji-box .emoji-tabs .emoji-container {
+    width: 322px;
+    overflow: hidden
+}
+
+.emoji-box .emoji-tabs .emoji-tab-wrap {
+    position: relative
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider {
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    width: 32px;
+    height: 22px
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider span {
+    float: left;
+    width: 16px;
+    height: 22px;
+    background-image: url(../img/icons-comment.png);
+    background-repeat: no-repeat;
+    cursor: default
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider .prev {
+    background-position: -536px -213px
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider .next {
+    background-position: -536px -149px
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider .prev.on {
+    background-position: -408px -213px;
+    cursor: pointer
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider .prev.on:hover {
+    background-position: -472px -213px
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider .next.on {
+    background-position: -408px -149px;
+    cursor: pointer
+}
+
+.emoji-box .emoji-tabs .emoji-tab-slider .next.on:hover {
+    background-position: -472px -149px
+}
+
+.emoji-box .emoji-tabs .tab-link {
+    float: left;
+    padding: 8px 12px;
+    width: 22px;
+    height: 22px
+}
+
+.emoji-box .emoji-tabs .tab-link.on {
+    background-color: #fff
+}
+
+.emoji-box .emoji-tabs .tab-link img {
+    width: 22px;
+    heigth: 22px
+}
+
+.user-card {
+    font-size: 12px;
+    position: absolute;
+    z-index: 9999;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .16);
+    border: 1px solid #e5e9ef;
+    border-radius: 4px;
+    width: 375px;
+    background: #fff
+}
+
+.user-card a {
+    text-decoration: none
+}
+
+.user-card p {
+    margin: 0
+}
+
+.user-card .bg {
+    position: absolute;
+    width: 375px;
+    height: 120px;
+    top: 0;
+    left: 0;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.user-card .face {
+    left: 20px;
+    top: 100px;
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px
+}
+
+.user-card .face img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%
+}
+
+.user-card .face .auth {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 34px;
+    background: url(../img/user-auth.png);
+    background-repeat: no-repeat
+}
+
+.user-card .face .p-auth {
+    background-position: -38px -53px
+}
+
+.user-card .face .o-auth {
+    background-position: -4px -53px
+}
+
+.user-card .info {
+    padding: 98px 0 19px 65px
+}
+
+.user-card .info p {
+    margin: 0;
+    color: #222
+}
+
+.user-card .info .sign {
+    line-height: 16px;
+    margin-top: 5px;
+    color: #99a2aa;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+.user-card .info .social a {
+    color: #222
+}
+
+.user-card .info .user {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.user-card .info .user .name {
+    color: #222
+}
+
+.user-card .info .user .sex {
+    background: url(../img/icons-comment.png) no-repeat;
+    margin-left: 6px;
+    width: 15px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+    top: 1px
+}
+
+.user-card .info .user .sex.men {
+    background-position: -25px -665px
+}
+
+.user-card .info .user .sex.women {
+    background-position: -25px -729px
+}
+
+.user-card .info .like {
+    margin-right: 20px
+}
+
+.user-card .info .level {
+    display: inline-block;
+    width: 19px;
+    height: 9px;
+    vertical-align: middle;
+    margin-left: 8px;
+    background: url(../img/icons-comment.png) no-repeat
+}
+
+.user-card .info .level.l0 {
+    background-position: -23px -28px
+}
+
+.user-card .info .level.l1 {
+    background-position: -23px -92px
+}
+
+.user-card .info .level.l2 {
+    background-position: -23px -156px
+}
+
+.user-card .info .level.l3 {
+    background-position: -23px -220px
+}
+
+.user-card .info .level.l4 {
+    background-position: -23px -284px
+}
+
+.user-card .info .level.l5 {
+    background-position: -23px -348px
+}
+
+.user-card .info .level.l6 {
+    background-position: -23px -412px
+}
+
+.user-card .info .level.l7 {
+    background-position: -23px -476px
+}
+
+.user-card .info .level.l8 {
+    background-position: -23px -540px
+}
+
+.user-card .info .level.l9 {
+    background-position: -23px -604px
+}
+
+.user-card .btn-box {
+    padding: 0 0 0 65px
+}
+
+.user-card .btn-box a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #ccd0d7;
+    margin-right: 20px;
+    border-radius: 3px;
+    color: #6d757a;
+    transition: all .3s;
+    background-color: #e5e9ef
+}
+
+.user-card .btn-box a:hover {
+    border-color: #00b5e5;
+    color: #00a1d6
+}
+
+.user-card .btn-box .like {
+    color: #fff;
+    font-weight: 400;
+    border-color: #00a1d6;
+    background-color: #00a1d6
+}
+
+.user-card .btn-box .like:hover {
+    border-color: #00b5e5;
+    background-color: #00b5e5;
+    color: #fff
+}
+
+.user-card .btn-box .hover-text {
+    display: none
+}
+
+.user-card .btn-box .like.liked:hover, .user-card .btn-box .liked {
+    background-color: #e5e9ef;
+    border-color: #e5e9ef;
+    color: #6d757a
+}
+
+.user-card .btn-box .like.liked:hover .default-text {
+    display: none
+}
+
+.user-card .btn-box .like.liked:hover .hover-text {
+    display: inline-block
+}
+
+.user-card .btn-box .message {
+    background-color: #fff
+}
+
+.user-card .vip-red-name {
+    color: #fb7299 !important
+}
+
+.bb-comment {
+    font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
+    zoom: 1;
+    min-height: 100px;
+    background: #fff
+}
+
+.bb-comment p {
+    margin: 0;
+    padding: 0
+}
+
+.bb-comment li, .bb-comment ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.bb-comment .clearfix {
+    zoom: 1
+}
+
+.bb-comment .clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    font-size: 0
+}
+
+.bb-comment img {
+    border: 0;
+    vertical-align: middle
+}
+
+.bb-comment a {
+    outline: 0;
+    color: #00a1d6;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.bb-comment a:hover {
+    color: #f25d8e
+}
+
+.bb-comment a:focus {
+    -moz-outline-style: none
+}
+
+.bb-comment textarea {
+    outline: 0;
+    resize: none
+}
+
+.bb-comment .comment-header {
+    margin: 0 0 24px;
+    border-bottom: 1px solid #e5e9ef
+}
+
+.bb-comment .comment-header .tabs-order {
+    float: left;
+    margin-bottom: -1px
+}
+
+.bb-comment .comment-header .tabs-order li {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 8px 0;
+    margin-right: 16px;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #222
+}
+
+.bb-comment .comment-header .tabs-order li.hot-sort {
+    display: none
+}
+
+.bb-comment .comment-header .tabs-order li:last-child {
+    margin: 0 16px
+}
+
+.bb-comment .comment-header .tabs-order li:hover {
+    color: #00a1d6
+}
+
+.bb-comment .comment-header .tabs-order li.on {
+    border-bottom: 1px solid #00a1d6;
+    color: #00a1d6
+}
+
+.bb-comment .comment-header .tabs-order li.on:after {
+    content: "";
+    width: 6px;
+    height: 3px;
+    background: transparent url(../img/icons-comment.png) -669px -31px no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    visibility: visible
+}
+
+.bb-comment .comment-header .header-page {
+    float: right;
+    line-height: 36px
+}
+
+.bb-comment .comment-send {
+    margin: 10px 0
+}
+
+.bb-comment .comment-send .user-face {
+    float: left;
+    margin: 7px 0 0 5px;
+    position: relative
+}
+
+.bb-comment .comment-send .user-face .user-head {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%
+}
+
+.bb-comment .comment-send .user-face .pendant {
+    width: 86px;
+    height: 86px;
+    border-radius: 0;
+    position: absolute;
+    top: -19px;
+    left: -19px
+}
+
+.bb-comment .comment-send .textarea-container {
+    position: relative;
+    margin-left: 85px;
+    margin-right: 80px
+}
+
+.bb-comment .comment-send .textarea-container textarea {
+    font-size: 12px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f4f5f7;
+    border: 1px solid #e5e9ef;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    width: 100% !important;
+    height: 65px;
+    transition: 0s;
+    padding: 5px 10px;
+    line-height: normal
+}
+
+.bb-comment .comment-send .textarea-container .ipt-arrow {
+    position: absolute;
+    left: -12px;
+    top: 22px;
+    background: url(../img/icons-comment.png) -395px -340px no-repeat;
+    width: 13px;
+    height: 20px;
+    display: inline-block;
+    z-index: 2
+}
+
+.bb-comment .comment-send .textarea-container.focus textarea, .bb-comment .comment-send .textarea-container:hover textarea {
+    background-color: #fff;
+    border-color: #00a1d6
+}
+
+.bb-comment .comment-send .textarea-container.focus .ipt-arrow, .bb-comment .comment-send .textarea-container:hover .ipt-arrow {
+    background-position: -395px -404px
+}
+
+.bb-comment .comment-send .textarea-container.error textarea {
+    background-color: #fff;
+    border-color: #e40c0c
+}
+
+.bb-comment .comment-send .textarea-container.error .ipt-arrow {
+    background-position: -395px -474px
+}
+
+.bb-comment .comment-send .comment-submit {
+    width: 70px;
+    height: 64px;
+    position: absolute;
+    right: -80px;
+    top: 0;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 60px;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: .1s;
+    user-select: none;
+    outline: 0
+}
+
+.bb-comment .comment-send .comment-submit:hover {
+    background-color: #00b5e5;
+    border-color: #00b5e5
+}
+
+.bb-comment .comment-send .comment-submit.disabled {
+    color: #b8c0cc;
+    background-color: #e5e9ef;
+    border-color: #e5e9ef;
+    padding: 4px 10px
+}
+
+.bb-comment .comment-send .comment-emoji {
+    padding: 0;
+    width: 66px;
+    height: 24px;
+    color: #99a2aa;
+    border: 1px solid #e5e9ef;
+    border-radius: 4px;
+    position: relative;
+    z-index: 101;
+    font-size: 12px;
+    text-align: center;
+    line-height: 23px;
+    margin-left: 86px;
+    margin-top: 3px;
+    cursor: pointer
+}
+
+.bb-comment .comment-send .comment-emoji .face {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background: url(../img/icons-comment.png) no-repeat -408px -24px
+}
+
+.bb-comment .comment-send .comment-emoji .text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 12px !important
+}
+
+.bb-comment .comment-send .comment-emoji.open, .bb-comment .comment-send .comment-emoji:hover {
+    color: #6d757a
+}
+
+.bb-comment .comment-send .comment-emoji.open .face, .bb-comment .comment-send .comment-emoji:hover .face {
+    background-position: -472px -24px
+}
+
+.bb-comment .comment-send .baffle {
+    display: none
+}
+
+.bb-comment .no-login {
+    position: relative
+}
+
+.bb-comment .no-login ::-webkit-input-placeholder {
+    color: #e5e9ef
+}
+
+.bb-comment .no-login .textarea-container textarea {
+    background-color: #e5e9ef
+}
+
+.bb-comment .no-login .textarea-container .ipt-arrow {
+    background-position: -395px -538px
+}
+
+.bb-comment .no-login .textarea-container.focus textarea, .bb-comment .no-login .textarea-container:hover textarea {
+    background-color: #e5e9ef;
+    border-color: #e5e9ef
+}
+
+.bb-comment .no-login .textarea-container.focus .ipt-arrow, .bb-comment .no-login .textarea-container:hover .ipt-arrow {
+    background-position: -395px -538px
+}
+
+.bb-comment .no-login .comment-submit {
+    cursor: default;
+    background-color: #e5e9ef !important;
+    border-color: #e5e9ef !important;
+    color: #b8c0cc !important
+}
+
+.bb-comment .no-login .comment-emoji {
+    background-color: #e5e9ef
+}
+
+.bb-comment .no-login .baffle {
+    display: block;
+    position: absolute;
+    z-index: 102;
+    width: 100%;
+    top: 0;
+    line-height: 64px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: center;
+    color: #777;
+    background-color: #e5e9ef;
+    overflow: hidden
+}
+
+.bb-comment .no-login .baffle .b-btn {
+    padding: 4px 9px;
+    margin: 0 3px;
+    color: #fff;
+    background-color: #00a1d6;
+    border-radius: 4px
+}
+
+.bb-comment .no-login .baffle .b-btn:hover {
+    background-color: #00b5e5
+}
+
+.bb-comment .comment-list {
+    padding-top: 20px
+}
+
+.bb-comment .comment-list .quote {
+    margin: 16px auto;
+    background: #f4f5f7;
+    border: 1px solid #e5e9ef;
+    border-radius: 4px;
+    padding: 10px;
+    overflow: auto
+}
+
+.bb-comment .comment-list .list-item .user-face {
+    float: left;
+    margin: 24px 0 0 5px;
+    position: relative
+}
+
+.bb-comment .comment-list .list-item .user-face img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%
+}
+
+.bb-comment .comment-list .list-item .user-face .pendant {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: -19px;
+    left: -19px;
+    display: block
+}
+
+.bb-comment .comment-list .list-item .user-face .pendant img {
+    border: 0;
+    border-radius: 0;
+    width: 86px;
+    height: 86px
+}
+
+.bb-comment .comment-list .list-item .user-face .hot-follow {
+    text-align: center;
+    position: relative;
+    top: 18px
+}
+
+.bb-comment .comment-list .list-item .user-face .hot-follow .follow-btn {
+    width: 48px;
+    height: 24px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #00a1d6;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0
+}
+
+.bb-comment .comment-list .list-item .user-face .hot-follow .follow-btn:hover {
+    background-color: #00b5e5
+}
+
+.bb-comment .comment-list .list-item .user-face .hot-follow .follow-btn.followed {
+    background: #e5e9ef;
+    color: #6d757a
+}
+
+.bb-comment .comment-list .list-item .con {
+    position: relative;
+    margin-left: 85px;
+    padding: 22px 0 14px;
+    border-top: 1px solid #e5e9ef
+}
+
+.bb-comment .comment-list .list-item .con .hidden-reply-toggle, .bb-comment .comment-list .list-item .con .quote {
+    font-size: 14px
+}
+
+.bb-comment .comment-list .list-item:last-child .con {
+    border-bottom: 1px solid #e5e9ef
+}
+
+.bb-comment .comment-list .list-item .no-border {
+    border-top: 0
+}
+
+.bb-comment .comment-list .list-item .user {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-bottom: 4px;
+    display: block;
+    word-wrap: break-word
+}
+
+.bb-comment .comment-list .list-item .user .level {
+    display: inline-block;
+    width: 19px;
+    height: 9px;
+    vertical-align: middle;
+    margin: 0 8px;
+    background: url(../img/icons-comment.png) no-repeat
+}
+
+.bb-comment .comment-list .list-item .user .level.l0 {
+    background-position: -23px -28px
+}
+
+.bb-comment .comment-list .list-item .user .level.l1 {
+    background-position: -23px -92px
+}
+
+.bb-comment .comment-list .list-item .user .level.l2 {
+    background-position: -23px -156px
+}
+
+.bb-comment .comment-list .list-item .user .level.l3 {
+    background-position: -23px -220px
+}
+
+.bb-comment .comment-list .list-item .user .level.l4 {
+    background-position: -23px -284px
+}
+
+.bb-comment .comment-list .list-item .user .level.l5 {
+    background-position: -23px -348px
+}
+
+.bb-comment .comment-list .list-item .user .level.l6 {
+    background-position: -23px -412px
+}
+
+.bb-comment .comment-list .list-item .user .level.l7 {
+    background-position: -23px -476px
+}
+
+.bb-comment .comment-list .list-item .user .level.l8 {
+    background-position: -23px -540px
+}
+
+.bb-comment .comment-list .list-item .user .level.l9 {
+    background-position: -23px -604px
+}
+
+.bb-comment .comment-list .list-item .user > a {
+    vertical-align: middle
+}
+
+.bb-comment .comment-list .list-item .user .name {
+    color: #4BB3E0
+}
+
+.bb-comment .comment-list .list-item .user .name:hover {
+    color: #00a1d6
+}
+
+.bb-comment .comment-list .list-item .user .text-con {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px
+}
+
+.bb-comment .comment-list .list-item .identity {
+    display: inline-block;
+    width: 34px;
+    height: 18px;
+    background: #fb7299;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 18px;
+    font-style: normal;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: 400
+}
+
+.bb-comment .comment-list .list-item .identity.true-love {
+    background: #f25d8e
+}
+
+.bb-comment .comment-list .list-item .text {
+    line-height: 20px;
+    padding: 2px 0;
+    font-size: 14px;
+    text-shadow: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-word
+}
+
+.bb-comment .comment-list .list-item .text img {
+    vertical-align: text-bottom;
+    width: 50px;
+    height: 50px
+}
+
+.bb-comment .comment-list .list-item .info {
+    color: #99a2aa;
+    line-height: 26px;
+    font-size: 12px
+}
+
+.bb-comment .comment-list .list-item .info > span {
+    margin-right: 20px
+}
+
+.bb-comment .comment-list .list-item .info .btn-hover {
+    padding: 0 5px;
+    border-radius: 4px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: inline-block
+}
+
+.bb-comment .comment-list .list-item .info .btn-hover:hover {
+    color: #00a1d6;
+    background: #e5e9ef
+}
+
+.bb-comment .comment-list .list-item .info .btn-hide, .bb-comment .comment-list .list-item .info .btn-hide-re {
+    visibility: hidden
+}
+
+.bb-comment .comment-list .list-item .info .plad a {
+    color: #99a2aa
+}
+
+.bb-comment .comment-list .list-item .info .plad a:hover {
+    color: #00a1d6
+}
+
+.bb-comment .comment-list .list-item .info .like {
+    cursor: pointer
+}
+
+.bb-comment .comment-list .list-item .info .like i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: text-top;
+    margin-right: 5px;
+    background: url(../img/icons-comment.png) no-repeat;
+    background-position: -153px -25px
+}
+
+.bb-comment .comment-list .list-item .info .like:hover i {
+    background-position: -218px -25px
+}
+
+.bb-comment .comment-list .list-item .info .like.liked:hover i, .bb-comment .comment-list .list-item .info .like.liked i {
+    background-position: -154px -89px
+}
+
+.bb-comment .comment-list .list-item .info .hate {
+    cursor: pointer;
+    margin-right: 15px
+}
+
+.bb-comment .comment-list .list-item .info .hate i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: text-top;
+    margin-right: 5px;
+    background: url(../img/icons-comment.png) no-repeat;
+    background-position: -153px -153px
+}
+
+.bb-comment .comment-list .list-item .info .hate:hover i {
+    background-position: -217px -153px
+}
+
+.bb-comment .comment-list .list-item .info .hate.hated:hover i, .bb-comment .comment-list .list-item .info .hate.hated i {
+    background-position: -154px -217px
+}
+
+.bb-comment .comment-list .list-item .info .operation {
+    position: relative;
+    width: 18px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 0
+}
+
+.bb-comment .comment-list .list-item .info .operation .spot {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../img/icons-comment.png) no-repeat;
+    background-position: -151px -280px
+}
+
+.bb-comment .comment-list .list-item .info .operation .spot:hover {
+    background-position: -216px -280px
+}
+
+.bb-comment .comment-list .list-item .info .operation .opera-list {
+    display: none;
+    position: absolute;
+    width: 100px;
+    right: 0;
+    top: 20px;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    color: #222;
+    font-size: 14px;
+    padding: 10px 0;
+    z-index: 999
+}
+
+.bb-comment .comment-list .list-item .info .operation .opera-list li {
+    padding: 0 15px;
+    cursor: pointer;
+    height: 36px;
+    line-height: 36px;
+    transition: all .3s
+}
+
+.bb-comment .comment-list .list-item .info .operation .opera-list li:hover {
+    background: #e5e9ef;
+    color: #00a1d6
+}
+
+.bb-comment .comment-list .list-item .info .operation.btn-hover {
+    padding: 0;
+    border-radius: 0;
+    margin-right: 0;
+    display: block
+}
+
+.bb-comment .comment-list .list-item .info .operation.btn-hover:hover {
+    color: none;
+    background: 0
+}
+
+.bb-comment .comment-list .list-item .blacklist-font-color {
+    color: #6d757a;
+    margin-right: 10px
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item {
+    padding: 10px 0
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .hidden-reply-toggle {
+    color: #6d757a
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .quote {
+    font-weight: 400
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .reply-face {
+    float: left;
+    margin: 5px 0 0
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .reply-face img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .reply-con {
+    margin-left: 34px
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .reply-con .user .name {
+    position: relative;
+    top: -1px
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .reply-con .user > a {
+    position: relative;
+    top: -2px
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item:hover .btn-hide-re {
+    visibility: visible
+}
+
+.bb-comment .comment-list .list-item .reply-box .reply-item .level {
+    margin: 0 15px 0 8px
+}
+
+.bb-comment .comment-list .list-item .reply-box .view-more {
+    font-size: 12px;
+    color: #6d757a
+}
+
+.bb-comment .comment-list .list-item .reply-box .view-more .btn-more {
+    padding: 2px 3px;
+    border-radius: 4px
+}
+
+.bb-comment .comment-list .list-item .reply-box .view-more .btn-more:hover {
+    background: #e5e9ef;
+    color: #00a1d6
+}
+
+.bb-comment .comment-list .list-item:hover .btn-hide {
+    visibility: visible
+}
+
+.bb-comment .bottom-page {
+    margin: 20px 0
+}
+
+.bb-comment .vip-red-name {
+    color: #fb7299 !important
+}
+
+.bb-comment .stick {
+    border: 1px solid #ff81aa;
+    min-width: 30px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #ff81aa;
+    border-radius: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
+    font-weight: 400
+}
+
+.bb-comment .stick:after {
+    content: ""
+}
+
+.bb-comment .stick.true-love {
+    color: #f25d8e;
+    border-color: #f25d8e;
+    padding: 0 2px 0 4px
+}
+
+.bb-comment .stick.true-love .medal-level {
+    margin-left: 4px;
+    display: inline-block;
+    padding: 0 3px 0 5px;
+    border-left: 1px solid #f25d8e
+}
+
+.bb-comment .stick.assist {
+    color: #fb7299;
+    border-color: #fb7299
+}
+
+.bb-comment .hot-line {
+    text-align: center;
+    border-bottom: 1px solid #e5e9ef;
+    position: relative;
+    margin: 20px 0 20px 85px;
+    font-size: 12px
+}
+
+.bb-comment .hot-line span {
+    position: absolute;
+    top: -7px;
+    margin-left: -115px;
+    padding: 0 20px;
+    background: #fff
+}
+
+.bb-comment .hot-line a {
+    padding: 5px 6px;
+    border-radius: 4px
+}
+
+.bb-comment .hot-line a:hover {
+    background: #e5e9ef;
+    color: #00a1d6
+}
+
+.bb-comment .comment-loading {
+    text-align: center;
+    height: 20px;
+    color: #99a2aa;
+    padding-bottom: 40px;
+    font-size: 12px
+}
+
+.bb-comment .reply-notice {
+    margin-bottom: 10px
+}
+
+.bb-comment .reply-notice .notice-item {
+    background-color: #fff1d3;
+    border: 1px solid #f8dfaa;
+    color: #e78b1f;
+    padding: 10px 30px 10px 40px;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    position: relative
+}
+
+.bb-comment .reply-notice .notice-item a {
+    color: #e78b1f;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+.bb-comment .reply-notice .notice-item .icon-notice {
+    background: url(../img/icons-comment.png);
+    background-position: -280px -24px;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 11px;
+    left: 10px
+}
+
+.bb-comment .reply-notice .notice-item .icon-close-notice {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icons-comment.png);
+    background-position: -278px -86px;
+    cursor: pointer
+}
+
+.bb-comment .no-more-reply {
+    color: #99a2aa;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 12px
+}
+
+.bb-comment .nameplate {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+    z-index: 1
+}
+
+.bb-comment .nameplate .nameplate-icon {
+    display: inline-block;
+    width: 40px
+}
+
+.bb-comment .nameplate:hover .nameplate-card {
+    display: block
+}
+
+.bb-comment .nameplate .nameplate-card {
+    display: none;
+    position: absolute;
+    left: 42px;
+    top: 1px;
+    width: 322px;
+    padding: 22px 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .16);
+    border: 1px solid #e5e9ef;
+    border-radius: 4px
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-pic {
+    width: 62px;
+    height: 62px;
+    overflow: hidden;
+    float: left
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-text {
+    float: left;
+    width: 219px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #e5e9ef;
+    font-weight: 400
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-text p {
+    margin: 3px 0
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-text .n-name {
+    font-weight: 700;
+    font-size: 14px
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-text .n-type {
+    color: #99a2aa
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-text .n-type a {
+    float: right;
+    color: #00a1d6
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-text .n-type a:hover {
+    color: #00a1d6
+}
+
+.bb-comment .nameplate .nameplate-card .nameplate-arrow {
+    position: absolute;
+    width: 7px;
+    height: 13px;
+    left: -7px;
+    top: 10px;
+    background: url("//static.hdslb.com/images/v2images/info_arrows.png")
+}
+
+.bb-comment .legalize {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: url(../img/user-auth.png);
+    background-repeat: no-repeat
+}
+
+.bb-comment .p-auth {
+    background-position: -38px -53px
+}
+
+.bb-comment .o-auth {
+    background-position: -4px -53px
+}
+
+.bb-comment .comment-captcha {
+    line-height: 50px;
+    font-size: 12px
+}
+
+.bb-comment .comment-captcha input {
+    border-radius: 4px;
+    border: 1px solid #ccd0d7;
+    background-color: #fff;
+    color: #45484b;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 5px;
+    padding: 0 3px;
+    vertical-align: middle
+}
+
+.bb-comment-h5 .no-login .baffle-wrap {
+    height: 64px;
+    position: absolute;
+    width: 100%;
+    background: #e5e9ef
+}
+
+.bb-comment-h5 .no-login .baffle-wrap .baffle {
+    top: 50%;
+    line-height: 20px;
+    transform: translateY(-50%)
+}
+
+.bb-comment-h5 .comment-send .user-face {
+    display: none
+}
+
+.bb-comment-h5 .comment-send .textarea-container {
+    margin-left: 0
+}
+
+.bb-comment-h5 .comment-send .comment-emoji {
+    display: none
+}
+
+.bb-comment-h5 .comment-list .list-item {
+    border-top: 1px solid #e5e9ef
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face {
+    margin-top: 15px
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face .legalize {
+    top: 20px;
+    left: 20px
+}
+
+.bb-comment-h5 .comment-list .list-item .nameplate .nameplate-icon img {
+    width: 24px;
+    height: 24px
+}
+
+.bb-comment-h5 .comment-list .list-item .con {
+    padding-top: 15px;
+    padding-bottom: 14px
+}
+
+.bb-comment-h5 .comment-list .list-item .con .user a {
+    font-size: 13px
+}
+
+.bb-comment-h5 .comment-list .list-item .reply-item {
+    border-top: 1px solid #e5e9ef
+}
+
+.bb-comment-h5 .comment-list .list-item .reply-box .reply-item .reply-con {
+    margin-left: 0
+}
+
+.bb-comment-h5 .comment-list .list-item .reply-box .reply-item:first-child {
+    margin-top: 14px
+}
+
+.bb-comment-h5 .comment-list .list-item .reply-box .reply-item:last-child {
+    padding-bottom: 0
+}
+
+.bb-comment-h5 .comment-list .list-item .reply-box .info .btn-hide-re {
+    visibility: visible
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face img {
+    width: 30px;
+    height: 30px
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face .pendant {
+    width: 54px;
+    height: 54px;
+    top: -13px;
+    left: -13px
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face .pendant img {
+    width: 54px;
+    height: 54px
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face .hot-follow {
+    margin-left: -10px;
+    font-size: 12px
+}
+
+.bb-comment-h5 .comment-list .list-item .user-face .hot-follow .follow-btn {
+    padding: 0
+}
+
+.bb-comment-h5 .comment-list .list-item .right {
+    float: right
+}
+
+.bb-comment-h5 .comment-list .list-item .right span {
+    font-weight: 400;
+    color: #99a2aa;
+    font-size: 12px
+}
+
+.bb-comment-h5 .comment-list .list-item .right span.time {
+    margin-left: 8px
+}
+
+.bb-comment-h5 .comment-list .list-item .info .btn-hide, .bb-comment-h5 .comment-list .list-item .info .btn-hide-re {
+    display: none
+}
+
+.bb-comment-h5 .comment-list .list-item .con {
+    margin-left: 55px;
+    border-top: 0
+}
+
+.bb-comment-h5 .comment-list .list-item .con .reply-con .right {
+    float: right
+}
+
+.bb-comment-h5 .comment-list .list-item .con .reply-con .right span {
+    font-weight: 400;
+    color: #99a2aa;
+    font-size: 12px
+}
+
+.bb-comment-h5 .comment-list .list-item .con .reply-con .text-con {
+    display: block
+}
+
+.bb-comment-h5 .bottom-page {
+    margin: 20px 0;
+    text-align: right
+}
+
+.comment-msg {
+    position: fixed;
+    top: 200px;
+    height: 1px;
+    z-index: 9999;
+    text-align: center;
+    width: 100%
+}
+
+.comment-msg span {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 10px 20px
+}
+
+.comment-bilibili-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 9999
+}
+
+.comment-bilibili-con {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -245px;
+    margin-top: -300px;
+    background: #fff;
+    width: 490px;
+    border-radius: 4px
+}
+
+@media (max-width: 768px) {
+    .comment-bilibili-con {
+        width: 90%;
+        margin-left: 0;
+        position: fixed;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0
+    }
+}
+
+.comment-bilibili-con .t {
+    text-align: center;
+    font-size: 18px;
+    color: #222;
+    padding: 20px;
+    border-bottom: 1px solid #eee
+}
+
+.comment-bilibili-con .t.no-title {
+    padding: 0;
+    border-bottom: 0
+}
+
+.comment-bilibili-con .t .btn-close {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.comment-bilibili-con .t .btn-close:before {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg)
+}
+
+.comment-bilibili-con .t .btn-close:after, .comment-bilibili-con .t .btn-close:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #aaa
+}
+
+.comment-bilibili-con .t .btn-close:after {
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg)
+}
+
+.comment-bilibili-con .t .btn-close:hover:after, .comment-bilibili-con .t .btn-close:hover:before {
+    background: #666
+}
+
+.comment-bilibili-con .con {
+    padding: 20px
+}
+
+.comment-bilibili-con .con input[type=radio] {
+    display: none;
+    position: absolute
+}
+
+.comment-bilibili-con .con input[type=radio]:checked + label:after {
+    opacity: 1
+}
+
+.comment-bilibili-con .con input[type=radio]:checked + label:before {
+    border-color: #00a1d6
+}
+
+.comment-bilibili-con .con .text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px 0
+}
+
+.comment-bilibili-con .con label {
+    position: relative;
+    display: block;
+    padding-left: 22px;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.comment-bilibili-con .con label:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    content: "";
+    border-radius: 50%;
+    border: 1px solid #bec3cc;
+    transition: all .3s
+}
+
+.comment-bilibili-con .con label:after {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00a1d6;
+    transition: all .3s
+}
+
+.comment-bilibili-con .reason-box {
+    font-size: 12px
+}
+
+.comment-bilibili-con .reason-box dl {
+    margin-bottom: 15px
+}
+
+.comment-bilibili-con .reason-box dl dt {
+    color: #99a2aa;
+    margin-bottom: 15px
+}
+
+.comment-bilibili-con .reason-box dl dd {
+    color: #222;
+    display: inline-block;
+    width: 100px;
+    margin: 0 10px 16px 0;
+    white-space: nowrap
+}
+
+.comment-bilibili-con .reason-box dl dd input {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #bec3cc
+}
+
+.comment-bilibili-con .other {
+    font-size: 12px
+}
+
+.comment-bilibili-con .other p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-bottom: 8px
+}
+
+.comment-bilibili-con .other .ta {
+    display: none
+}
+
+.comment-bilibili-con .other .ta textarea {
+    width: 96%;
+    border: 1px solid #ccd0d7;
+    border-radius: 4px;
+    resize: none;
+    outline: 0;
+    transition: all .3s;
+    padding: 8px;
+    height: 52px
+}
+
+.comment-bilibili-con .other .ta textarea:hover {
+    border-color: #99a2aa
+}
+
+.comment-bilibili-con .other .ta textarea:focus {
+    border-color: #00a1d6
+}
+
+.comment-bilibili-con .btn {
+    text-align: center
+}
+
+.comment-bilibili-con .btn .btn-submit {
+    text-decoration: none;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background: #00a1d6;
+    border: 1px solid #00a1d6;
+    border-radius: 4px;
+    margin: 30px 0 10px;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.comment-bilibili-con .btn .btn-submit:hover {
+    background: #00b5e5;
+    border-color: #00b5e5
+}
+
+.comment-bilibili-con .btn .btn-cancel {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #222;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccd0d7;
+    border-radius: 4px;
+    margin: 30px 0 10px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-right: 20px
+}
+
+.comment-bilibili-con .btn .btn-cancel:hover {
+    background: #eee
+}
+
+.comment-m .b-head {
+    font-size: 18px;
+    line-height: 24px;
+    color: #222;
+    margin: 0 0 20px
+}
+
+.comment-m .b-head > .results {
+    margin-right: 10px
+}
+
+.reply-submit {
+    width: 70px;
+    height: 64px;
+    position: absolute;
+    right: -80px;
+    top: 0;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 60px;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: .1s;
+    user-select: none;
+    outline: 0
+}
+
+.user-badge {
+    display: none;
+}

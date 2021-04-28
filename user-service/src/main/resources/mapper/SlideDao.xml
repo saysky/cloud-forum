@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cloud.user.dao.SlideDao">
+
+    <resultMap type="com.example.cloud.user.api.entity.Slide" id="SlideMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="guid" column="guid" jdbcType="VARCHAR"/>
+        <result property="picture" column="picture" jdbcType="VARCHAR"/>
+        <result property="position" column="position" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="SlideMap">
+        select
+          id, guid, picture, position, status, title
+        from slide
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SlideMap">
+        select
+          id, guid, picture, position, status, title
+        from slide
+        where status = 'publish'
+        order by position DESC
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SlideMap">
+        select
+          id, guid, picture, position, status, title
+        from slide
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="guid != null and guid != ''">
+                and guid = #{guid}
+            </if>
+            <if test="picture != null and picture != ''">
+                and picture = #{picture}
+            </if>
+            <if test="position != null">
+                and position = #{position}
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                and status = #{status}
+            </if>
+            <if test="title != null and title != ''">
+                and title = #{title}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into slide(guid, picture, position, status, title)
+        values (#{guid}, #{picture}, #{position}, #{status}, #{title})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update slide
+        <set>
+            <if test="guid != null and guid != ''">
+                guid = #{guid},
+            </if>
+            <if test="picture != null and picture != ''">
+                picture = #{picture},
+            </if>
+            <if test="position != null">
+                position = #{position},
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                status = #{status},
+            </if>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from slide where id = #{id}
+    </delete>
+
+</mapper>

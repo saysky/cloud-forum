@@ -1,0 +1,30 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: qa-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  main:
+    allow-bean-definition-overriding: true
+  transaction:
+    rollback-on-commit-failure: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #MySql配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cloud_forum?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&autoReconnect=true
+    username: root
+    password: 123456
+mybatis:
+  mapper-locations: classpath*:/mapper/**Dao.xml
+  type-aliases-package: com.example.cloud.qa.api.entity
+  configuration:
+    map-underscore-to-camel-case: true
+#分页pageHelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true

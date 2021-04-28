@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cloud.qa.dao.QuestionDao">
+
+    <resultMap type="com.example.cloud.qa.api.entity.Question" id="QuestionMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="answerSize" column="answer_size" jdbcType="INTEGER"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="guid" column="guid" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="VARCHAR"/>
+        <result property="summary" column="summary" jdbcType="VARCHAR"/>
+        <result property="tags" column="tags" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="viewSize" column="view_size" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="QuestionMap">
+        select
+          id, answer_size, content, create_time, guid, status, summary, tags, title, update_time, view_size, user_id
+        from question
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="QuestionMap">
+        select
+          id, answer_size, content, create_time, guid, status, summary, tags, title, update_time, view_size, user_id
+        from question
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="QuestionMap">
+        select
+          id, answer_size, content, create_time, guid, status, summary, tags, title, update_time, view_size, user_id
+        from question
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="answerSize != null">
+                and answer_size = #{answerSize}
+            </if>
+            <if test="content != null and content != ''">
+                and content = #{content}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="guid != null and guid != ''">
+                and guid = #{guid}
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                and status = #{status}
+            </if>
+            <if test="summary != null and summary != ''">
+                and summary = #{summary}
+            </if>
+            <if test="tags != null and tags != ''">
+                and tags = #{tags}
+            </if>
+            <if test="title != null and title != ''">
+                ( title LIKE CONCAT('%', #{title} ,'%')
+                OR tags LIKE CONCAT('%', #{title} ,'%') )
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="viewSize != null">
+                and view_size = #{viewSize}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+        </where>
+
+
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into question(answer_size, content, create_time, guid, status, summary, tags, title, update_time, view_size, user_id)
+        values (#{answerSize}, #{content}, #{createTime}, #{guid}, #{status}, #{summary}, #{tags}, #{title}, #{updateTime}, #{viewSize}, #{userId})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update question
+        <set>
+            <if test="answerSize != null">
+                answer_size = #{answerSize},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="guid != null and guid != ''">
+                guid = #{guid},
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                status = #{status},
+            </if>
+            <if test="summary != null and summary != ''">
+                summary = #{summary},
+            </if>
+            <if test="tags != null and tags != ''">
+                tags = #{tags},
+            </if>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="viewSize != null">
+                view_size = #{viewSize},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from question where id = #{id}
+    </delete>
+
+</mapper>

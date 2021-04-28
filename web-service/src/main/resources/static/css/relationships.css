@@ -1,0 +1,149 @@
+ol, ul {
+    list-style: none;
+}
+
+.concern-list {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.concern-list ul {
+    margin-left: -18px;
+}
+
+.concern-list .box {
+    float: left;
+    padding: 20px;
+    background-color: #f8fafc;
+    margin-left: 1%;
+    margin-bottom: 15px;
+    min-height: 114px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .concern-list .box {
+        width: 32%;
+    }
+}
+
+.concern-list .left-img {
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 0;
+}
+
+.concern-list .left-img .top_head {
+    position: absolute;
+    top: 0;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.concern-list .right-c {
+    margin-left: 50px;
+}
+
+.concern-list .right-c .title {
+    font-weight: 700;
+    color: #07111b;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.concern-list .right-c .title .nickname {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.concern-list .right-c .desc {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-height: 18px;
+}
+
+.concern-list .right-c .desc, .concern-list .right-c .fs-line {
+    color: #93999f;
+    padding-bottom: 8px;
+    font-size: 12px;
+}
+
+.concern-list .right-c .desc, .concern-list .right-c .fs-line {
+    color: #93999f;
+    padding-bottom: 8px;
+    font-size: 12px;
+}
+
+.concern-list .right-c .fs-line .u-target {
+    color: #93999f !important;
+}
+
+.concern-list .right-c .fs-line .group {
+    display: inline-block;
+}
+
+em {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.concern-list .right-c .fs-line .u-target {
+    color: #93999f !important;
+}
+
+concern-list .u-margin-l-5 {
+    margin-left: 5px;
+}
+
+.concern-list .hide {
+    display: none;
+}
+
+.concern-list .btn-gray-o {
+    border: 1px solid #d0d6d9;
+    color: #787d82;
+    background-color: #fff;
+    margin-right: 14px;
+}
+
+.concern-list .btn-o {
+    padding: 6px 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 76px;
+    display: block;
+    float: left;
+}
+
+.concern-list .btn-o {
+    text-align: center;
+}
+
+.concern-list .btn-green-o {
+    border: 1px solid #00b43c;
+    color: #00b43c;
+    background-color: #fff;
+    margin-right: 14px;
+}
+
+.nodata {
+    height: 420px;
+    line-height: 420px;
+    font-size: 18px;
+    color: #b5b9bc;
+    text-align: center;
+}

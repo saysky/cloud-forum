@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cloud.article.dao.CommentDao">
+
+    <resultMap type="com.example.cloud.article.api.entity.Comment" id="CommentMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="caiSize" column="cai_size" jdbcType="INTEGER"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="floor" column="floor" jdbcType="INTEGER"/>
+        <result property="isSticky" column="is_sticky" jdbcType="INTEGER"/>
+        <result property="pid" column="pid" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="VARCHAR"/>
+        <result property="zanSize" column="zan_size" jdbcType="INTEGER"/>
+        <result property="articleId" column="article_id" jdbcType="INTEGER"/>
+        <result property="replyUserId" column="reply_user_id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CommentMap">
+        select
+          id, cai_size, content, create_time, floor, is_sticky, pid, status, zan_size, article_id, reply_user_id, user_id
+        from comment
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="CommentMap">
+        select
+          id, cai_size, content, create_time, floor, is_sticky, pid, status, zan_size, article_id, reply_user_id, user_id
+        from comment
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="CommentMap">
+        select
+          id, cai_size, content, create_time, floor, is_sticky, pid, status, zan_size, article_id, reply_user_id, user_id
+        from comment
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="caiSize != null">
+                and cai_size = #{caiSize}
+            </if>
+            <if test="content != null and content != ''">
+                and content  LIKE CONCAT('%', #{content} ,'%')
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="floor != null">
+                and floor = #{floor}
+            </if>
+            <if test="isSticky != null">
+                and is_sticky = #{isSticky}
+            </if>
+            <if test="pid != null">
+                and pid = #{pid}
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                and status = #{status}
+            </if>
+            <if test="zanSize != null">
+                and zan_size = #{zanSize}
+            </if>
+            <if test="articleId != null">
+                and article_id = #{articleId}
+            </if>
+            <if test="replyUserId != null">
+                and reply_user_id = #{replyUserId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into comment(cai_size, content, create_time, floor, is_sticky, pid, status, zan_size, article_id, reply_user_id, user_id)
+        values (#{caiSize}, #{content}, #{createTime}, #{floor}, #{isSticky}, #{pid}, #{status}, #{zanSize}, #{articleId}, #{replyUserId}, #{userId})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update comment
+        <set>
+            <if test="caiSize != null">
+                cai_size = #{caiSize},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="floor != null">
+                floor = #{floor},
+            </if>
+            <if test="isSticky != null">
+                is_sticky = #{isSticky},
+            </if>
+            <if test="pid != null">
+                pid = #{pid},
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                status = #{status},
+            </if>
+            <if test="zanSize != null">
+                zan_size = #{zanSize},
+            </if>
+            <if test="articleId != null">
+                article_id = #{articleId},
+            </if>
+            <if test="replyUserId != null">
+                reply_user_id = #{replyUserId},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from comment where id = #{id}
+    </delete>
+
+</mapper>

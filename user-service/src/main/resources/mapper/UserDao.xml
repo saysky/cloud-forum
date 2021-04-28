@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cloud.user.dao.UserDao">
+
+    <resultMap type="com.example.cloud.user.api.entity.User" id="UserMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="answerSize" column="answer_size" jdbcType="INTEGER"/>
+        <result property="articleSize" column="article_size" jdbcType="INTEGER"/>
+        <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        <result property="contact" column="contact" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="fanSize" column="fan_size" jdbcType="INTEGER"/>
+        <result property="followSize" column="follow_size" jdbcType="INTEGER"/>
+        <result property="github" column="github" jdbcType="VARCHAR"/>
+        <result property="homepage" column="homepage" jdbcType="VARCHAR"/>
+        <result property="isVerifyEmail" column="is_verify_email" jdbcType="VARCHAR"/>
+        <result property="lastLoginTime" column="last_login_time" jdbcType="TIMESTAMP"/>
+        <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="profile" column="profile" jdbcType="VARCHAR"/>
+        <result property="questionSize" column="question_size" jdbcType="INTEGER"/>
+        <result property="reputation" column="reputation" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="VARCHAR"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="viewSize" column="view_size" jdbcType="INTEGER"/>
+        <result property="jobId" column="job_id" jdbcType="INTEGER"/>
+        <result property="role" column="role" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="UserMap">
+        select
+          id, answer_size, article_size, avatar, contact, create_time, email, fan_size, follow_size, github, homepage, is_verify_email, last_login_time, nickname, password, profile, question_size, reputation, status, username, view_size, job_id, role
+        from user
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="UserMap">
+        select
+          id, answer_size, article_size, avatar, contact, create_time, email, fan_size, follow_size, github, homepage, is_verify_email, last_login_time, nickname, password, profile, question_size, reputation, status, username, view_size, job_id, role
+        from user
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="UserMap">
+        select
+          id, answer_size, article_size, avatar, contact, create_time, email, fan_size, follow_size, github, homepage, is_verify_email, last_login_time, nickname, password, profile, question_size, reputation, status, username, view_size, job_id, role
+        from user
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="answerSize != null">
+                and answer_size = #{answerSize}
+            </if>
+            <if test="articleSize != null">
+                and article_size = #{articleSize}
+            </if>
+            <if test="avatar != null and avatar != ''">
+                and avatar = #{avatar}
+            </if>
+            <if test="contact != null and contact != ''">
+                and contact = #{contact}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="email != null and email != ''">
+                and email = #{email}
+            </if>
+            <if test="fanSize != null">
+                and fan_size = #{fanSize}
+            </if>
+            <if test="followSize != null">
+                and follow_size = #{followSize}
+            </if>
+            <if test="github != null and github != ''">
+                and github = #{github}
+            </if>
+            <if test="homepage != null and homepage != ''">
+                and homepage = #{homepage}
+            </if>
+            <if test="isVerifyEmail != null and isVerifyEmail != ''">
+                and is_verify_email = #{isVerifyEmail}
+            </if>
+            <if test="lastLoginTime != null">
+                and last_login_time = #{lastLoginTime}
+            </if>
+            <if test="nickname != null and nickname != ''">
+                and nickname = #{nickname}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+            <if test="profile != null and profile != ''">
+                and profile = #{profile}
+            </if>
+            <if test="questionSize != null">
+                and question_size = #{questionSize}
+            </if>
+            <if test="reputation != null">
+                and reputation = #{reputation}
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                and status = #{status}
+            </if>
+            <if test="username != null and username != ''">
+                and username LIKE CONCAT('%',#{username} ,'%')
+            </if>
+            <if test="viewSize != null">
+                and view_size = #{viewSize}
+            </if>
+            <if test="jobId != null">
+                and job_id = #{jobId}
+            </if>
+            <if test="role != null and role != ''">
+                and role = #{role}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into user(answer_size, article_size, avatar, contact, create_time, email, fan_size, follow_size, github, homepage, is_verify_email, last_login_time, nickname, password, profile, question_size, reputation, status, username, view_size, job_id, role)
+        values (#{answerSize}, #{articleSize}, #{avatar}, #{contact}, #{createTime}, #{email}, #{fanSize}, #{followSize}, #{github}, #{homepage}, #{isVerifyEmail}, #{lastLoginTime}, #{nickname}, #{password}, #{profile}, #{questionSize}, #{reputation}, #{status}, #{username}, #{viewSize}, #{jobId}, #{role})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update user
+        <set>
+            <if test="answerSize != null">
+                answer_size = #{answerSize},
+            </if>
+            <if test="articleSize != null">
+                article_size = #{articleSize},
+            </if>
+            <if test="avatar != null and avatar != ''">
+                avatar = #{avatar},
+            </if>
+            <if test="contact != null and contact != ''">
+                contact = #{contact},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="fanSize != null">
+                fan_size = #{fanSize},
+            </if>
+            <if test="followSize != null">
+                follow_size = #{followSize},
+            </if>
+            <if test="github != null and github != ''">
+                github = #{github},
+            </if>
+            <if test="homepage != null and homepage != ''">
+                homepage = #{homepage},
+            </if>
+            <if test="isVerifyEmail != null and isVerifyEmail != ''">
+                is_verify_email = #{isVerifyEmail},
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time = #{lastLoginTime},
+            </if>
+            <if test="nickname != null and nickname != ''">
+                nickname = #{nickname},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="profile != null and profile != ''">
+                profile = #{profile},
+            </if>
+            <if test="questionSize != null">
+                question_size = #{questionSize},
+            </if>
+            <if test="reputation != null">
+                reputation = #{reputation},
+            </if>
+            <if test="status != null and status != '' and status != 'all'">
+                status = #{status},
+            </if>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="viewSize != null">
+                view_size = #{viewSize},
+            </if>
+            <if test="jobId != null">
+                job_id = #{jobId},
+            </if>
+            <if test="role != null and role != ''">
+                role = #{role},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from user where id = #{id}
+    </delete>
+
+</mapper>
