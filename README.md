@@ -1,3 +1,7 @@
+## 博主开发的其他论坛或博客项目全部在这里
+**[https://liuyanzhao.com/shop.html?k=论坛](https://liuyanzhao.com/shop.html?k=论坛)** <br/>
+**[https://liuyanzhao.com/shop.html?k=博客](https://liuyanzhao.com/shop.html?k=博客)**   <br/>
+- -------------------------------------------------------------------------------
 - 基于SpringCloud Alibaba实现的论坛
 - 预览地址：[http://codergroup.cn](http://codergroup.cn)(功能90%一致，删减了部分功能)
 - 详细介绍地址：[https://liuyanzhao.com/shop/cloud-forum.html](https://liuyanzhao.com/shop/cloud-forum.html)
